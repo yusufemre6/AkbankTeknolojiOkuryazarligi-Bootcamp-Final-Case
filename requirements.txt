@@ -7,3 +7,5 @@ langchain
 langchain-community
 chromadb
 pandas
+
+# prompt dışına çıkıldığında uyarı veren kodu yaz

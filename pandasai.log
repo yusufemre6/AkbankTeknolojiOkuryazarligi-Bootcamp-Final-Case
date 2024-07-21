@@ -1,0 +1,1161 @@
+2024-07-21 20:09:07 [INFO] Question: Al işlemi en çok yapılan hisse senedinin adını yazar mısın ? 
+2024-07-21 20:09:07 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-07-21 20:09:07 [INFO] Prompt ID: cc552b27-239f-465f-beb5-afe057dd6089
+2024-07-21 20:09:07 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-07-21 20:09:07 [INFO] Executing Step 0: ValidatePipelineInput
+2024-07-21 20:09:07 [INFO] Executing Step 1: CacheLookup
+2024-07-21 20:09:07 [INFO] Executing Step 2: PromptGeneration
+2024-07-21 20:09:08 [INFO] Querying without using training data.
+2024-07-21 20:09:08 [INFO] Querying without using training docs.
+2024-07-21 20:09:08 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 1000
+  columns: 6
+  schema:
+    fields:
+    - name: "\u0130\u015Flem"
+      type: object
+      samples:
+      - AL
+      - SAT
+      - SAT
+      description: "Yat\u0131r\u0131mc\u0131n\u0131n belirtilen hisseyi ald\u0131\u011F\
+        \u0131n\u0131 ya da satt\u0131\u011F\u0131n\u0131 g\xF6sterir."
+    - name: Hisse Senedi
+      type: object
+      samples:
+      - NUGYO.IS
+      - ITTFH.IS
+      - VERTU.IS
+      description: "Yat\u0131r\u0131mc\u0131n\u0131n i\u015Flem yapt\u0131\u011F\u0131\
+        \ hisse kodudur."
+    - name: Adet
+      type: int64
+      samples:
+      - 98
+      - 34
+      - 63
+      description: "\u0130\u015Flem yap\u0131lan hissenin ka\xE7 adet yap\u0131ld\u0131\
+        \u011F\u0131n\u0131 g\xF6sterir"
+    - name: Fiyat
+      type: float64
+      samples:
+      - 80.0
+      - 11.84
+      - 526.0
+      description: "\u0130\u015Flem yap\u0131lan hissede hangi fiyattan i\u015Flem\
+        \ yap\u0131ld\u0131\u011F\u0131n\u0131 g\xF6sterir"
+    - name: Tarih
+      type: object
+      samples:
+      - '2024-04-09 21:28:41'
+      - '2023-10-11 21:28:41'
+      - '2023-12-29 21:28:41'
+      description: "\u0130\u015Flemin yap\u0131ld\u0131\u011F\u0131 tarih"
+    - name: "Sekt\xF6r"
+      type: object
+      samples:
+      - "G\xFCbre"
+      - "Bankac\u0131l\u0131k"
+      - Perakende
+      description: "\u0130\u015Flem yap\u0131lan hissenin ait oldu\u011Fu \u015Firketin\
+        \ sekt\xF6r\xFCn\xFC belirtir."
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ Al işlemi en çok yapılan hisse senedinin adını yazar mısın ? 
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-07-21 20:09:08 [INFO] Executing Step 3: CodeGenerator
+2024-07-21 20:09:08 [ERROR] Pipeline failed on step 3: Your LLM inference limit has been reached. To upgrade, please contact us at https://forms.gle/JEUqkwuTqFZjhP7h8
+2024-07-21 20:16:47 [INFO] Question: Al işlemi en çok yapılan hisse senedinin adını yazar mısın ? 
+2024-07-21 20:16:47 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-07-21 20:16:47 [INFO] Prompt ID: 939ebac5-d9ee-44c8-9d2a-7a4132686cf2
+2024-07-21 20:16:47 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-07-21 20:16:47 [INFO] Executing Step 0: ValidatePipelineInput
+2024-07-21 20:16:47 [INFO] Executing Step 1: CacheLookup
+2024-07-21 20:16:47 [INFO] Executing Step 2: PromptGeneration
+2024-07-21 20:16:48 [INFO] Querying without using training data.
+2024-07-21 20:16:48 [INFO] Querying without using training docs.
+2024-07-21 20:16:48 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 1000
+  columns: 6
+  schema:
+    fields:
+    - name: "\u0130\u015Flem"
+      type: object
+      samples:
+      - SAT
+      - AL
+      - SAT
+      description: "Yat\u0131r\u0131mc\u0131n\u0131n belirtilen hisseyi ald\u0131\u011F\
+        \u0131n\u0131 ya da satt\u0131\u011F\u0131n\u0131 g\xF6sterir."
+    - name: Hisse Senedi
+      type: object
+      samples:
+      - TAVHL.IS
+      - VAKKO.IS
+      - NUGYO.IS
+      description: "Yat\u0131r\u0131mc\u0131n\u0131n i\u015Flem yapt\u0131\u011F\u0131\
+        \ hisse kodudur."
+    - name: Adet
+      type: int64
+      samples:
+      - 98
+      - 25
+      - 95
+      description: "\u0130\u015Flem yap\u0131lan hissenin ka\xE7 adet yap\u0131ld\u0131\
+        \u011F\u0131n\u0131 g\xF6sterir"
+    - name: Fiyat
+      type: float64
+      samples:
+      - 61.5
+      - 32.96
+      - 3.5
+      description: "\u0130\u015Flem yap\u0131lan hissede hangi fiyattan i\u015Flem\
+        \ yap\u0131ld\u0131\u011F\u0131n\u0131 g\xF6sterir"
+    - name: Tarih
+      type: object
+      samples:
+      - '2023-10-17 21:28:41'
+      - '2023-09-10 21:28:41'
+      - '2023-09-03 21:28:41'
+      description: "\u0130\u015Flemin yap\u0131ld\u0131\u011F\u0131 tarih"
+    - name: "Sekt\xF6r"
+      type: object
+      samples:
+      - "Bankac\u0131l\u0131k"
+      - Madencilik
+      - Otomotiv
+      description: "\u0130\u015Flem yap\u0131lan hissenin ait oldu\u011Fu \u015Firketin\
+        \ sekt\xF6r\xFCn\xFC belirtir."
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ Al işlemi en çok yapılan hisse senedinin adını yazar mısın ? 
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-07-21 20:16:48 [INFO] Executing Step 3: CodeGenerator
+2024-07-21 20:16:51 [INFO] Prompt used:
+            None
+            
+2024-07-21 20:16:51 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+most_bought_stock = dfs[0]['Hisse Senedi'][dfs[0]['İşlem'] == 'AL'].value_counts().idxmax()
+
+# Declare result var: 
+result = { "type": "string", "value": most_bought_stock }
+            ```
+            
+2024-07-21 20:16:51 [INFO] Executing Step 4: CachePopulation
+2024-07-21 20:16:51 [INFO] Executing Step 5: CodeCleaning
+2024-07-21 20:16:51 [INFO] 
+Code running:
+```
+most_bought_stock = dfs[0]['Hisse Senedi'][dfs[0]['İşlem'] == 'AL'].value_counts().idxmax()
+result = {'type': 'string', 'value': most_bought_stock}
+        ```
+2024-07-21 20:16:51 [INFO] Executing Step 6: CodeExecution
+2024-07-21 20:16:51 [INFO] Executing Step 7: ResultValidation
+2024-07-21 20:16:51 [INFO] Answer: {'type': 'string', 'value': 'KONKA.IS'}
+2024-07-21 20:16:51 [INFO] Executing Step 8: ResultParsing
+2024-07-21 20:17:02 [INFO] Question: en çok Al işlemi yapılan hisse senedinin adını söyler misin ? 
+2024-07-21 20:17:02 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-07-21 20:17:02 [INFO] Prompt ID: 259cc656-d2af-4cc5-815a-b16a5e26d486
+2024-07-21 20:17:02 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-07-21 20:17:02 [INFO] Executing Step 0: ValidatePipelineInput
+2024-07-21 20:17:02 [INFO] Executing Step 1: CacheLookup
+2024-07-21 20:17:02 [INFO] Executing Step 2: PromptGeneration
+2024-07-21 20:17:02 [INFO] Querying without using training data.
+2024-07-21 20:17:03 [INFO] Querying without using training docs.
+2024-07-21 20:17:03 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 1000
+  columns: 6
+  schema:
+    fields:
+    - name: "\u0130\u015Flem"
+      type: object
+      samples:
+      - SAT
+      - AL
+      - AL
+      description: "Yat\u0131r\u0131mc\u0131n\u0131n belirtilen hisseyi ald\u0131\u011F\
+        \u0131n\u0131 ya da satt\u0131\u011F\u0131n\u0131 g\xF6sterir."
+    - name: Hisse Senedi
+      type: object
+      samples:
+      - MPARK.IS
+      - METRO.IS
+      - KCHOL.IS
+      description: "Yat\u0131r\u0131mc\u0131n\u0131n i\u015Flem yapt\u0131\u011F\u0131\
+        \ hisse kodudur."
+    - name: Adet
+      type: int64
+      samples:
+      - 4
+      - 24
+      - 90
+      description: "\u0130\u015Flem yap\u0131lan hissenin ka\xE7 adet yap\u0131ld\u0131\
+        \u011F\u0131n\u0131 g\xF6sterir"
+    - name: Fiyat
+      type: float64
+      samples:
+      - 14.51
+      - 32.74
+      - 10.16
+      description: "\u0130\u015Flem yap\u0131lan hissede hangi fiyattan i\u015Flem\
+        \ yap\u0131ld\u0131\u011F\u0131n\u0131 g\xF6sterir"
+    - name: Tarih
+      type: object
+      samples:
+      - '2024-05-10 21:28:41'
+      - '2023-07-26 21:28:41'
+      - '2024-03-24 21:28:41'
+      description: "\u0130\u015Flemin yap\u0131ld\u0131\u011F\u0131 tarih"
+    - name: "Sekt\xF6r"
+      type: object
+      samples:
+      - "Havac\u0131l\u0131k"
+      - Spor
+      - "Yaz\u0131l\u0131m"
+      description: "\u0130\u015Flem yap\u0131lan hissenin ait oldu\u011Fu \u015Firketin\
+        \ sekt\xF6r\xFCn\xFC belirtir."
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ en çok Al işlemi yapılan hisse senedinin adını söyler misin ? 
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-07-21 20:17:03 [INFO] Executing Step 3: CodeGenerator
+2024-07-21 20:17:05 [INFO] Prompt used:
+            None
+            
+2024-07-21 20:17:05 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Find the most bought stock
+most_bought_stock = dfs[0][dfs[0]['İşlem'] == 'AL']['Hisse Senedi'].value_counts().idxmax()
+
+# Declare result var
+result = {
+    "type": "string",
+    "value": most_bought_stock
+}
+            ```
+            
+2024-07-21 20:17:05 [INFO] Executing Step 4: CachePopulation
+2024-07-21 20:17:05 [INFO] Executing Step 5: CodeCleaning
+2024-07-21 20:17:05 [INFO] 
+Code running:
+```
+most_bought_stock = dfs[0][dfs[0]['İşlem'] == 'AL']['Hisse Senedi'].value_counts().idxmax()
+result = {'type': 'string', 'value': most_bought_stock}
+        ```
+2024-07-21 20:17:05 [INFO] Executing Step 6: CodeExecution
+2024-07-21 20:17:05 [INFO] Executing Step 7: ResultValidation
+2024-07-21 20:17:05 [INFO] Answer: {'type': 'string', 'value': 'KONKA.IS'}
+2024-07-21 20:17:05 [INFO] Executing Step 8: ResultParsing
+2024-07-21 20:19:03 [INFO] Question: Al işlemi yapılan  hisse senetlerinin sektörlerini pasta grafiği olarak verir misin ? 
+2024-07-21 20:19:03 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-07-21 20:19:03 [INFO] Prompt ID: 0e511258-6bde-46d5-933a-000296507323
+2024-07-21 20:19:03 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-07-21 20:19:03 [INFO] Executing Step 0: ValidatePipelineInput
+2024-07-21 20:19:03 [INFO] Executing Step 1: CacheLookup
+2024-07-21 20:19:03 [INFO] Executing Step 2: PromptGeneration
+2024-07-21 20:19:04 [INFO] Querying without using training data.
+2024-07-21 20:19:04 [INFO] Querying without using training docs.
+2024-07-21 20:19:04 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 1000
+  columns: 6
+  schema:
+    fields:
+    - name: "\u0130\u015Flem"
+      type: object
+      samples:
+      - AL
+      - AL
+      - SAT
+      description: "Yat\u0131r\u0131mc\u0131n\u0131n belirtilen hisseyi ald\u0131\u011F\
+        \u0131n\u0131 ya da satt\u0131\u011F\u0131n\u0131 g\xF6sterir."
+    - name: Hisse Senedi
+      type: object
+      samples:
+      - ULKER.IS
+      - KARTN.IS
+      - ZOREN.IS
+      description: "Yat\u0131r\u0131mc\u0131n\u0131n i\u015Flem yapt\u0131\u011F\u0131\
+        \ hisse kodudur."
+    - name: Adet
+      type: int64
+      samples:
+      - 80
+      - 36
+      - 91
+      description: "\u0130\u015Flem yap\u0131lan hissenin ka\xE7 adet yap\u0131ld\u0131\
+        \u011F\u0131n\u0131 g\xF6sterir"
+    - name: Fiyat
+      type: float64
+      samples:
+      - 21.2
+      - 14.51
+      - 62.4
+      description: "\u0130\u015Flem yap\u0131lan hissede hangi fiyattan i\u015Flem\
+        \ yap\u0131ld\u0131\u011F\u0131n\u0131 g\xF6sterir"
+    - name: Tarih
+      type: object
+      samples:
+      - '2023-10-12 21:28:41'
+      - '2023-11-07 21:28:41'
+      - '2023-08-20 21:28:41'
+      description: "\u0130\u015Flemin yap\u0131ld\u0131\u011F\u0131 tarih"
+    - name: "Sekt\xF6r"
+      type: object
+      samples:
+      - Sigorta
+      - Lastik
+      - Gayrimenkul
+      description: "\u0130\u015Flem yap\u0131lan hissenin ait oldu\u011Fu \u015Firketin\
+        \ sekt\xF6r\xFCn\xFC belirtir."
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ Al işlemi yapılan  hisse senetlerinin sektörlerini pasta grafiği olarak verir misin ? 
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-07-21 20:19:04 [INFO] Executing Step 3: CodeGenerator
+2024-07-21 20:19:08 [INFO] Prompt used:
+            None
+            
+2024-07-21 20:19:08 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Write code here
+df = dfs[0]  # Assuming the relevant DataFrame is the first one in the list
+
+# Filter rows where operation is 'AL' (Buy)
+al_sectors = df[df['İşlem'] == 'AL']['Sektör']
+
+# Count the occurrences of each sector
+sector_counts = al_sectors.value_counts()
+
+# Plotting a pie chart
+plt.figure(figsize=(10, 6))
+plt.pie(sector_counts, labels=sector_counts.index, autopct='%1.1f%%', startangle=140)
+plt.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+plt.title('Sektör Dağılımı')
+
+# Save the plot as a PNG file
+plt.savefig('sector_pie_chart.png')
+
+# Declare result var
+result = {"type": "plot", "value": "sector_pie_chart.png"}
+            ```
+            
+2024-07-21 20:19:08 [INFO] Executing Step 4: CachePopulation
+2024-07-21 20:19:08 [INFO] Executing Step 5: CodeCleaning
+2024-07-21 20:19:08 [INFO] Saving charts to exports/charts/0e511258-6bde-46d5-933a-000296507323.png
+2024-07-21 20:19:08 [INFO] 
+Code running:
+```
+df = dfs[0]
+al_sectors = df[df['İşlem'] == 'AL']['Sektör']
+sector_counts = al_sectors.value_counts()
+plt.figure(figsize=(10, 6))
+plt.pie(sector_counts, labels=sector_counts.index, autopct='%1.1f%%', startangle=140)
+plt.axis('equal')
+plt.title('Sektör Dağılımı')
+plt.savefig('exports/charts/0e511258-6bde-46d5-933a-000296507323.png')
+result = {'type': 'plot', 'value': 'exports/charts/0e511258-6bde-46d5-933a-000296507323.png'}
+        ```
+2024-07-21 20:19:08 [INFO] Executing Step 6: CodeExecution
+2024-07-21 20:19:08 [INFO] Executing Step 7: ResultValidation
+2024-07-21 20:19:08 [INFO] Answer: {'type': 'plot', 'value': 'exports/charts/0e511258-6bde-46d5-933a-000296507323.png'}
+2024-07-21 20:19:08 [INFO] Executing Step 8: ResultParsing
+2024-07-21 20:20:59 [INFO] Question: En çok  al işlemi yapılan ilk 5 şirketin mum grafiğinde işlem sayısı hisse senedi olacak şekilde verebilir misin ?
+2024-07-21 20:20:59 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-07-21 20:20:59 [INFO] Prompt ID: 65be85e8-1c7a-496e-844b-36355656fa83
+2024-07-21 20:20:59 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-07-21 20:20:59 [INFO] Executing Step 0: ValidatePipelineInput
+2024-07-21 20:20:59 [INFO] Executing Step 1: CacheLookup
+2024-07-21 20:20:59 [INFO] Executing Step 2: PromptGeneration
+2024-07-21 20:20:59 [INFO] Querying without using training data.
+2024-07-21 20:21:00 [INFO] Querying without using training docs.
+2024-07-21 20:21:00 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 1000
+  columns: 6
+  schema:
+    fields:
+    - name: "\u0130\u015Flem"
+      type: object
+      samples:
+      - AL
+      - SAT
+      - SAT
+      description: "Yat\u0131r\u0131mc\u0131n\u0131n belirtilen hisseyi ald\u0131\u011F\
+        \u0131n\u0131 ya da satt\u0131\u011F\u0131n\u0131 g\xF6sterir."
+    - name: Hisse Senedi
+      type: object
+      samples:
+      - HUBVC.IS
+      - LUKSK.IS
+      - TATGD.IS
+      description: "Yat\u0131r\u0131mc\u0131n\u0131n i\u015Flem yapt\u0131\u011F\u0131\
+        \ hisse kodudur."
+    - name: Adet
+      type: int64
+      samples:
+      - 79
+      - 100
+      - 52
+      description: "\u0130\u015Flem yap\u0131lan hissenin ka\xE7 adet yap\u0131ld\u0131\
+        \u011F\u0131n\u0131 g\xF6sterir"
+    - name: Fiyat
+      type: float64
+      samples:
+      - 97.1
+      - 8.07
+      - 108.5
+      description: "\u0130\u015Flem yap\u0131lan hissede hangi fiyattan i\u015Flem\
+        \ yap\u0131ld\u0131\u011F\u0131n\u0131 g\xF6sterir"
+    - name: Tarih
+      type: object
+      samples:
+      - '2023-09-29 21:28:41'
+      - '2024-04-17 21:28:41'
+      - '2024-04-01 21:28:41'
+      description: "\u0130\u015Flemin yap\u0131ld\u0131\u011F\u0131 tarih"
+    - name: "Sekt\xF6r"
+      type: object
+      samples:
+      - Seramik
+      - Otomotiv
+      - Madencilik
+      description: "\u0130\u015Flem yap\u0131lan hissenin ait oldu\u011Fu \u015Firketin\
+        \ sekt\xF6r\xFCn\xFC belirtir."
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ En çok  al işlemi yapılan ilk 5 şirketin mum grafiğinde işlem sayısı hisse senedi olacak şekilde verebilir misin ?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-07-21 20:21:00 [INFO] Executing Step 3: CodeGenerator
+2024-07-21 20:21:02 [INFO] Prompt used:
+            None
+            
+2024-07-21 20:21:02 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Find the top 5 companies with the highest number of 'AL' transactions
+al_transactions = dfs[0][dfs[0]['İşlem'] == 'AL']
+top_5_companies = al_transactions['Hisse Senedi'].value_counts().head(5)
+
+# Create a DataFrame with the required information
+result_df = pd.DataFrame(top_5_companies).reset_index()
+result_df.columns = ['Hisse Senedi', 'İşlem Sayısı']
+
+# Declare result variable as a dataframe
+result = {"type": "dataframe", "value": result_df}
+            ```
+            
+2024-07-21 20:21:02 [INFO] Executing Step 4: CachePopulation
+2024-07-21 20:21:02 [INFO] Executing Step 5: CodeCleaning
+2024-07-21 20:21:02 [INFO] 
+Code running:
+```
+al_transactions = dfs[0][dfs[0]['İşlem'] == 'AL']
+top_5_companies = al_transactions['Hisse Senedi'].value_counts().head(5)
+result_df = pd.DataFrame(top_5_companies).reset_index()
+result_df.columns = ['Hisse Senedi', 'İşlem Sayısı']
+result = {'type': 'dataframe', 'value': result_df}
+        ```
+2024-07-21 20:21:02 [INFO] Executing Step 6: CodeExecution
+2024-07-21 20:21:02 [INFO] Executing Step 7: ResultValidation
+2024-07-21 20:21:02 [INFO] Answer: {'type': 'dataframe', 'value':   Hisse Senedi  İşlem Sayısı
+0     KONKA.IS            10
+1     KOZAL.IS             9
+2     SAYAS.IS             9
+3     VAKBN.IS             9
+4     VAKKO.IS             9}
+2024-07-21 20:21:02 [INFO] Executing Step 8: ResultParsing
+2024-07-21 20:21:47 [INFO] Question: En çok  al işlemi yapılan ilk 5 şirketin boxplot olarak işlem sayısı hisse senedi olacak şekilde verebilir misin ?
+2024-07-21 20:21:47 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-07-21 20:21:47 [INFO] Prompt ID: db661207-5395-4a11-bbf8-f08b745d0ce5
+2024-07-21 20:21:47 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-07-21 20:21:47 [INFO] Executing Step 0: ValidatePipelineInput
+2024-07-21 20:21:47 [INFO] Executing Step 1: CacheLookup
+2024-07-21 20:21:47 [INFO] Executing Step 2: PromptGeneration
+2024-07-21 20:21:47 [INFO] Querying without using training data.
+2024-07-21 20:21:48 [INFO] Querying without using training docs.
+2024-07-21 20:21:48 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 1000
+  columns: 6
+  schema:
+    fields:
+    - name: "\u0130\u015Flem"
+      type: object
+      samples:
+      - SAT
+      - AL
+      - SAT
+      description: "Yat\u0131r\u0131mc\u0131n\u0131n belirtilen hisseyi ald\u0131\u011F\
+        \u0131n\u0131 ya da satt\u0131\u011F\u0131n\u0131 g\xF6sterir."
+    - name: Hisse Senedi
+      type: object
+      samples:
+      - NTGAZ.IS
+      - SOKM.IS
+      - MRGYO.IS
+      description: "Yat\u0131r\u0131mc\u0131n\u0131n i\u015Flem yapt\u0131\u011F\u0131\
+        \ hisse kodudur."
+    - name: Adet
+      type: int64
+      samples:
+      - 59
+      - 7
+      - 22
+      description: "\u0130\u015Flem yap\u0131lan hissenin ka\xE7 adet yap\u0131ld\u0131\
+        \u011F\u0131n\u0131 g\xF6sterir"
+    - name: Fiyat
+      type: float64
+      samples:
+      - 14.4
+      - 335.75
+      - 83.39
+      description: "\u0130\u015Flem yap\u0131lan hissede hangi fiyattan i\u015Flem\
+        \ yap\u0131ld\u0131\u011F\u0131n\u0131 g\xF6sterir"
+    - name: Tarih
+      type: object
+      samples:
+      - '2024-01-01 21:28:41'
+      - '2023-11-12 21:28:41'
+      - '2024-03-22 21:28:41'
+      description: "\u0130\u015Flemin yap\u0131ld\u0131\u011F\u0131 tarih"
+    - name: "Sekt\xF6r"
+      type: object
+      samples:
+      - Otomotiv
+      - Ambalaj
+      - Tekstil
+      description: "\u0130\u015Flem yap\u0131lan hissenin ait oldu\u011Fu \u015Firketin\
+        \ sekt\xF6r\xFCn\xFC belirtir."
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ En çok  al işlemi yapılan ilk 5 şirketin boxplot olarak işlem sayısı hisse senedi olacak şekilde verebilir misin ?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-07-21 20:21:48 [INFO] Executing Step 3: CodeGenerator
+2024-07-21 20:21:52 [INFO] Prompt used:
+            None
+            
+2024-07-21 20:21:52 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Extracting the necessary data from the DataFrame
+df = dfs[0]
+df_al = df[df['İşlem'] == 'AL']
+
+# Grouping by Hisse Senedi and counting the number of AL transactions for each stock
+top_5_shares = df_al.groupby('Hisse Senedi').size().nlargest(5)
+
+# Filtering the DataFrame to include only the top 5 shares
+df_top_5 = df_al[df_al['Hisse Senedi'].isin(top_5_shares.index)]
+
+# Creating a boxplot for the number of AL transactions for the top 5 shares
+plt.figure(figsize=(10, 6))
+plt.boxplot([df_top_5[df_top_5['Hisse Senedi'] == share]['Adet'] for share in top_5_shares.index], labels=top_5_shares.index)
+plt.xlabel('Hisse Senedi')
+plt.ylabel('İşlem Sayısı')
+plt.title('En Çok Al İşlemi Yapılan İlk 5 Şirketin Boxplot Grafiği')
+plt.grid(axis='y')
+plt.xticks(rotation=45)
+plt.tight_layout()
+
+# Save the plot as a PNG file
+plt.savefig('top_5_shares_boxplot.png')
+
+# Declare result variable
+result = {
+    "type": "plot",
+    "value": "top_5_shares_boxplot.png"
+}
+            ```
+            
+2024-07-21 20:21:52 [INFO] Executing Step 4: CachePopulation
+2024-07-21 20:21:52 [INFO] Executing Step 5: CodeCleaning
+2024-07-21 20:21:52 [INFO] Saving charts to exports/charts/db661207-5395-4a11-bbf8-f08b745d0ce5.png
+2024-07-21 20:21:52 [INFO] 
+Code running:
+```
+df = dfs[0]
+df_al = df[df['İşlem'] == 'AL']
+top_5_shares = df_al.groupby('Hisse Senedi').size().nlargest(5)
+df_top_5 = df_al[df_al['Hisse Senedi'].isin(top_5_shares.index)]
+plt.figure(figsize=(10, 6))
+plt.boxplot([df_top_5[df_top_5['Hisse Senedi'] == share]['Adet'] for share in top_5_shares.index], labels=top_5_shares.index)
+plt.xlabel('Hisse Senedi')
+plt.ylabel('İşlem Sayısı')
+plt.title('En Çok Al İşlemi Yapılan İlk 5 Şirketin Boxplot Grafiği')
+plt.grid(axis='y')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.savefig('exports/charts/db661207-5395-4a11-bbf8-f08b745d0ce5.png')
+result = {'type': 'plot', 'value': 'exports/charts/db661207-5395-4a11-bbf8-f08b745d0ce5.png'}
+        ```
+2024-07-21 20:21:52 [INFO] Executing Step 6: CodeExecution
+2024-07-21 20:21:52 [INFO] Executing Step 7: ResultValidation
+2024-07-21 20:21:52 [INFO] Answer: {'type': 'plot', 'value': 'exports/charts/db661207-5395-4a11-bbf8-f08b745d0ce5.png'}
+2024-07-21 20:21:52 [INFO] Executing Step 8: ResultParsing
+2024-07-21 20:23:00 [INFO] Question: En çok  al işlemi yapılan 5 şirketin işlem sayısı y ekseninde,  hisse senedi adı x ekseninde olacak şekilde sütun grafiği yapabilir misin ?
+2024-07-21 20:23:00 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-07-21 20:23:00 [INFO] Prompt ID: 2f4ce153-e1b2-45b5-ba3f-d66fbfa99304
+2024-07-21 20:23:00 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-07-21 20:23:00 [INFO] Executing Step 0: ValidatePipelineInput
+2024-07-21 20:23:00 [INFO] Executing Step 1: CacheLookup
+2024-07-21 20:23:00 [INFO] Executing Step 2: PromptGeneration
+2024-07-21 20:23:00 [INFO] Querying without using training data.
+2024-07-21 20:23:00 [INFO] Querying without using training docs.
+2024-07-21 20:23:00 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 1000
+  columns: 6
+  schema:
+    fields:
+    - name: "\u0130\u015Flem"
+      type: object
+      samples:
+      - SAT
+      - AL
+      - AL
+      description: "Yat\u0131r\u0131mc\u0131n\u0131n belirtilen hisseyi ald\u0131\u011F\
+        \u0131n\u0131 ya da satt\u0131\u011F\u0131n\u0131 g\xF6sterir."
+    - name: Hisse Senedi
+      type: object
+      samples:
+      - KONKA.IS
+      - TCELL.IS
+      - TKNSA.IS
+      description: "Yat\u0131r\u0131mc\u0131n\u0131n i\u015Flem yapt\u0131\u011F\u0131\
+        \ hisse kodudur."
+    - name: Adet
+      type: int64
+      samples:
+      - 31
+      - 89
+      - 53
+      description: "\u0130\u015Flem yap\u0131lan hissenin ka\xE7 adet yap\u0131ld\u0131\
+        \u011F\u0131n\u0131 g\xF6sterir"
+    - name: Fiyat
+      type: float64
+      samples:
+      - 5.38
+      - 8.39
+      - 59.14
+      description: "\u0130\u015Flem yap\u0131lan hissede hangi fiyattan i\u015Flem\
+        \ yap\u0131ld\u0131\u011F\u0131n\u0131 g\xF6sterir"
+    - name: Tarih
+      type: object
+      samples:
+      - '2024-03-03 21:28:41'
+      - '2023-11-29 21:28:41'
+      - '2024-04-11 21:28:41'
+      description: "\u0130\u015Flemin yap\u0131ld\u0131\u011F\u0131 tarih"
+    - name: "Sekt\xF6r"
+      type: object
+      samples:
+      - "Telekom\xFCnikasyon"
+      - "Yaz\u0131l\u0131m"
+      - "\u0130\xE7ecek"
+      description: "\u0130\u015Flem yap\u0131lan hissenin ait oldu\u011Fu \u015Firketin\
+        \ sekt\xF6r\xFCn\xFC belirtir."
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ En çok  al işlemi yapılan 5 şirketin işlem sayısı y ekseninde,  hisse senedi adı x ekseninde olacak şekilde sütun grafiği yapabilir misin ?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-07-21 20:23:00 [INFO] Executing Step 3: CodeGenerator
+2024-07-21 20:23:03 [INFO] Prompt used:
+            None
+            
+2024-07-21 20:23:03 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Get the dataframe with buy transactions
+buy_transactions = dfs[0][dfs[0]['İşlem'] == 'AL']
+
+# Group by Hisse Senedi and count the number of transactions
+top_5_shares = buy_transactions['Hisse Senedi'].value_counts().head(5)
+
+# Plot the bar chart
+plt.figure(figsize=(12, 6))
+top_5_shares.plot(kind='bar')
+plt.xlabel('Hisse Senedi')
+plt.ylabel('İşlem Sayısı')
+plt.title('En Çok Alış İşlemi Yapılan 5 Şirket')
+plt.show()
+
+# Declare result var
+result = {"type": "plot", "value": "top_5_shares_chart.png"}
+            ```
+            
+2024-07-21 20:23:03 [INFO] Executing Step 4: CachePopulation
+2024-07-21 20:23:03 [INFO] Executing Step 5: CodeCleaning
+2024-07-21 20:23:03 [INFO] Saving charts to exports/charts/2f4ce153-e1b2-45b5-ba3f-d66fbfa99304.png
+2024-07-21 20:23:03 [INFO] 
+Code running:
+```
+buy_transactions = dfs[0][dfs[0]['İşlem'] == 'AL']
+top_5_shares = buy_transactions['Hisse Senedi'].value_counts().head(5)
+plt.figure(figsize=(12, 6))
+top_5_shares.plot(kind='bar')
+plt.xlabel('Hisse Senedi')
+plt.ylabel('İşlem Sayısı')
+plt.title('En Çok Alış İşlemi Yapılan 5 Şirket')
+plt.show()
+result = {'type': 'plot', 'value': 'exports/charts/2f4ce153-e1b2-45b5-ba3f-d66fbfa99304.png'}
+        ```
+2024-07-21 20:23:03 [INFO] Executing Step 6: CodeExecution
+2024-07-21 20:23:03 [ERROR] Pipeline failed on step 6: [Errno 2] No such file or directory: 'exports/charts/2f4ce153-e1b2-45b5-ba3f-d66fbfa99304.png'
+2024-07-21 20:24:24 [INFO] Question: En çok al işlemi yapılan 5 şirketin işlem sayısı y ekseninde, hisse senedi adı x ekseninde olacak şekilde sütun grafiği yapabilir misin ?
+2024-07-21 20:24:24 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-07-21 20:24:24 [INFO] Prompt ID: dbd74216-df7f-4528-8d0e-7f3c40fe6947
+2024-07-21 20:24:24 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-07-21 20:24:24 [INFO] Executing Step 0: ValidatePipelineInput
+2024-07-21 20:24:24 [INFO] Executing Step 1: CacheLookup
+2024-07-21 20:24:24 [INFO] Executing Step 2: PromptGeneration
+2024-07-21 20:24:25 [INFO] Querying without using training data.
+2024-07-21 20:24:25 [INFO] Querying without using training docs.
+2024-07-21 20:24:25 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 1000
+  columns: 6
+  schema:
+    fields:
+    - name: "\u0130\u015Flem"
+      type: object
+      samples:
+      - AL
+      - AL
+      - SAT
+      description: "Yat\u0131r\u0131mc\u0131n\u0131n belirtilen hisseyi ald\u0131\u011F\
+        \u0131n\u0131 ya da satt\u0131\u011F\u0131n\u0131 g\xF6sterir."
+    - name: Hisse Senedi
+      type: object
+      samples:
+      - MGROS.IS
+      - EREGL.IS
+      - VKGYO.IS
+      description: "Yat\u0131r\u0131mc\u0131n\u0131n i\u015Flem yapt\u0131\u011F\u0131\
+        \ hisse kodudur."
+    - name: Adet
+      type: int64
+      samples:
+      - 53
+      - 32
+      - 87
+      description: "\u0130\u015Flem yap\u0131lan hissenin ka\xE7 adet yap\u0131ld\u0131\
+        \u011F\u0131n\u0131 g\xF6sterir"
+    - name: Fiyat
+      type: float64
+      samples:
+      - 67.79
+      - 104.9
+      - 29.15
+      description: "\u0130\u015Flem yap\u0131lan hissede hangi fiyattan i\u015Flem\
+        \ yap\u0131ld\u0131\u011F\u0131n\u0131 g\xF6sterir"
+    - name: Tarih
+      type: object
+      samples:
+      - '2024-03-14 21:28:41'
+      - '2024-04-02 21:28:41'
+      - '2023-10-14 21:28:41'
+      description: "\u0130\u015Flemin yap\u0131ld\u0131\u011F\u0131 tarih"
+    - name: "Sekt\xF6r"
+      type: object
+      samples:
+      - Tekstil
+      - "\xC7elik"
+      - "\u0130la\xE7"
+      description: "\u0130\u015Flem yap\u0131lan hissenin ait oldu\u011Fu \u015Firketin\
+        \ sekt\xF6r\xFCn\xFC belirtir."
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+
+
+
+
+### QUERY
+ En çok al işlemi yapılan 5 şirketin işlem sayısı y ekseninde, hisse senedi adı x ekseninde olacak şekilde sütun grafiği yapabilir misin ?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-07-21 20:24:25 [INFO] Executing Step 3: CodeGenerator
+2024-07-21 20:24:28 [INFO] Prompt used:
+            None
+            
+2024-07-21 20:24:28 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Extract the relevant data for the analysis
+df = dfs[0]
+
+# Filter the dataframe for 'AL' transactions
+al_df = df[df['İşlem'] == 'AL']
+
+# Count the number of transactions for each company
+top_companies = al_df['Hisse Senedi'].value_counts().head(5)
+
+# Plotting the bar chart
+plt.figure(figsize=(12, 6))
+plt.bar(top_companies.index, top_companies.values, color='skyblue')
+plt.xlabel('Hisse Senedi')
+plt.ylabel('İşlem Sayısı')
+plt.title('En Çok Al İşlemi Yapılan 5 Şirketin İşlem Sayısı')
+
+# Save the plot as a png
+plt.savefig('transaction_chart.png')
+
+# Declare result variable
+result = {"type": "plot", "value": "transaction_chart.png"}
+            ```
+            
+2024-07-21 20:24:28 [INFO] Executing Step 4: CachePopulation
+2024-07-21 20:24:28 [INFO] Executing Step 5: CodeCleaning
+2024-07-21 20:24:28 [INFO] Saving charts to exports/charts/dbd74216-df7f-4528-8d0e-7f3c40fe6947.png
+2024-07-21 20:24:28 [INFO] 
+Code running:
+```
+df = dfs[0]
+al_df = df[df['İşlem'] == 'AL']
+top_companies = al_df['Hisse Senedi'].value_counts().head(5)
+plt.figure(figsize=(12, 6))
+plt.bar(top_companies.index, top_companies.values, color='skyblue')
+plt.xlabel('Hisse Senedi')
+plt.ylabel('İşlem Sayısı')
+plt.title('En Çok Al İşlemi Yapılan 5 Şirketin İşlem Sayısı')
+plt.savefig('exports/charts/dbd74216-df7f-4528-8d0e-7f3c40fe6947.png')
+result = {'type': 'plot', 'value': 'exports/charts/dbd74216-df7f-4528-8d0e-7f3c40fe6947.png'}
+        ```
+2024-07-21 20:24:28 [INFO] Executing Step 6: CodeExecution
+2024-07-21 20:24:28 [INFO] Executing Step 7: ResultValidation
+2024-07-21 20:24:28 [INFO] Answer: {'type': 'plot', 'value': 'exports/charts/dbd74216-df7f-4528-8d0e-7f3c40fe6947.png'}
+2024-07-21 20:24:28 [INFO] Executing Step 8: ResultParsing
+2024-07-21 20:25:41 [INFO] Question: En çok al işlemi yapılan 5 şirketin işlem sayısı y ekseninde, hisse senedi adı x ekseninde olacak şekilde sütun grafiği yapabilir misin ?
+2024-07-21 20:25:41 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-07-21 20:25:41 [INFO] Prompt ID: 6313f60b-1ac2-4b17-a9d4-ada4f6a57dda
+2024-07-21 20:25:41 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-07-21 20:25:41 [INFO] Executing Step 0: ValidatePipelineInput
+2024-07-21 20:25:41 [INFO] Executing Step 1: CacheLookup
+2024-07-21 20:25:41 [INFO] Using cached response
+2024-07-21 20:25:41 [INFO] Executing Step 2: PromptGeneration
+2024-07-21 20:25:41 [INFO] Executing Step 2: Skipping...
+2024-07-21 20:25:41 [INFO] Executing Step 3: CodeGenerator
+2024-07-21 20:25:41 [INFO] Executing Step 3: Skipping...
+2024-07-21 20:25:41 [INFO] Executing Step 4: CachePopulation
+2024-07-21 20:25:41 [INFO] Executing Step 4: Skipping...
+2024-07-21 20:25:41 [INFO] Executing Step 5: CodeCleaning
+2024-07-21 20:25:41 [INFO] Saving charts to /Users/yusufemre/Desktop/AkbankTeknolojiOkuryazarligi-Bootcamp-Final-Case/exports/charts/temp_chart.png
+2024-07-21 20:25:41 [INFO] 
+Code running:
+```
+df = dfs[0]
+al_df = df[df['İşlem'] == 'AL']
+top_companies = al_df['Hisse Senedi'].value_counts().head(5)
+plt.figure(figsize=(12, 6))
+plt.bar(top_companies.index, top_companies.values, color='skyblue')
+plt.xlabel('Hisse Senedi')
+plt.ylabel('İşlem Sayısı')
+plt.title('En Çok Al İşlemi Yapılan 5 Şirketin İşlem Sayısı')
+plt.savefig('/Users/yusufemre/Desktop/AkbankTeknolojiOkuryazarligi-Bootcamp-Final-Case/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': '/Users/yusufemre/Desktop/AkbankTeknolojiOkuryazarligi-Bootcamp-Final-Case/exports/charts/temp_chart.png'}
+        ```
+2024-07-21 20:25:41 [INFO] Executing Step 6: CodeExecution
+2024-07-21 20:25:41 [INFO] Executing Step 7: ResultValidation
+2024-07-21 20:25:41 [INFO] Answer: {'type': 'plot', 'value': '/Users/yusufemre/Desktop/AkbankTeknolojiOkuryazarligi-Bootcamp-Final-Case/exports/charts/temp_chart.png'}
+2024-07-21 20:25:41 [INFO] Executing Step 8: ResultParsing
+2024-07-21 20:25:52 [INFO] Question: En çok al işlemi yapılan 5 şirketin işlem sayısı y ekseninde, hisse senedi adı x ekseninde olacak şekilde sütun grafiği yapabilir misin ?
+2024-07-21 20:25:52 [INFO] Running PandasAI with bamboo_llm LLM...
+2024-07-21 20:25:52 [INFO] Prompt ID: eb440236-da5e-4068-b8f3-10f8a6df94bf
+2024-07-21 20:25:52 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-07-21 20:25:52 [INFO] Executing Step 0: ValidatePipelineInput
+2024-07-21 20:25:52 [INFO] Executing Step 1: CacheLookup
+2024-07-21 20:25:52 [INFO] Using cached response
+2024-07-21 20:25:52 [INFO] Executing Step 2: PromptGeneration
+2024-07-21 20:25:52 [INFO] Executing Step 2: Skipping...
+2024-07-21 20:25:52 [INFO] Executing Step 3: CodeGenerator
+2024-07-21 20:25:52 [INFO] Executing Step 3: Skipping...
+2024-07-21 20:25:52 [INFO] Executing Step 4: CachePopulation
+2024-07-21 20:25:52 [INFO] Executing Step 4: Skipping...
+2024-07-21 20:25:52 [INFO] Executing Step 5: CodeCleaning
+2024-07-21 20:25:52 [INFO] Saving charts to /Users/yusufemre/Desktop/AkbankTeknolojiOkuryazarligi-Bootcamp-Final-Case/exports/charts/temp_chart.png
+2024-07-21 20:25:52 [INFO] 
+Code running:
+```
+df = dfs[0]
+al_df = df[df['İşlem'] == 'AL']
+top_companies = al_df['Hisse Senedi'].value_counts().head(5)
+plt.figure(figsize=(12, 6))
+plt.bar(top_companies.index, top_companies.values, color='skyblue')
+plt.xlabel('Hisse Senedi')
+plt.ylabel('İşlem Sayısı')
+plt.title('En Çok Al İşlemi Yapılan 5 Şirketin İşlem Sayısı')
+plt.savefig('/Users/yusufemre/Desktop/AkbankTeknolojiOkuryazarligi-Bootcamp-Final-Case/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': '/Users/yusufemre/Desktop/AkbankTeknolojiOkuryazarligi-Bootcamp-Final-Case/exports/charts/temp_chart.png'}
+        ```
+2024-07-21 20:25:52 [INFO] Executing Step 6: CodeExecution
+2024-07-21 20:25:52 [INFO] Executing Step 7: ResultValidation
+2024-07-21 20:25:52 [INFO] Answer: {'type': 'plot', 'value': '/Users/yusufemre/Desktop/AkbankTeknolojiOkuryazarligi-Bootcamp-Final-Case/exports/charts/temp_chart.png'}
+2024-07-21 20:25:52 [INFO] Executing Step 8: ResultParsing

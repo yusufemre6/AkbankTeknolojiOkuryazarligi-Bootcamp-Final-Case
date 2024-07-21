@@ -1,16 +1,14 @@
+from dotenv import load_dotenv
 import os
-from pandasai import SmartDatalake
 from pandasai import SmartDataframe
-from pandasai import Agent
 import pandas as pd
 from pandasai.llm import BambooLLM
 from pandasai.connectors import PandasConnector
 import streamlit as st
-from langchain_community.vectorstores import Chroma
 
+load_dotenv()
 
-os.environ["PANDASAI_API_KEY"] = "$2a$10$JylcoYsV/LXlebzpvpy3l.720kMKu3h1lzdwwvbEfzQxXbG4aSDfW"
-Chroma_Path = "chroma"
+os.environ["PANDASAI_API_KEY"] = os.getenv('PANDASAI_API_KEY')
 
 Prompt_Template = """
 Sen borsa yatırımcıları için bir asistansın ve soruyu yalnızca aşağıdaki bağlama dayanarak cevapla:
@@ -20,34 +18,32 @@ Sen borsa yatırımcıları için bir asistansın ve soruyu yalnızca aşağıda
 Yukarıdaki bağlama dayanarak soruyu cevapla: {question}
 """
 
-
 llm = BambooLLM()
 
-companies = pd.read_csv("data/companies.csv")
+transictions = pd.read_csv("data/transaction.csv")
 
-field_descriptions = {
-    "Date":"Satırdaki şirkete ait hissenin verilerinin tarihini ifade eder.",
-    "adjclose":"Satırdaki şirkete ait hissenin Date kolonundaki tarihinde kapanış fiyatı",
-    "low":"Satırdaki şirkete ait hissenin Date kolonundaki tarih içerisindeki işlem saatlerinde gördüğü en düşük fiyat değerini gösterir.",
-    "high":"Satırdaki şirkete ait hissenin Date kolonundaki tarih içerisindeki işlem saatlerinde gördüğü en yüksek fiyat değerini gösterir.",
-    "volume":"Satırdaki şirkete ait hissenin Date kolonundaki tarihinde hisse üzerinde yapılan işlem hacmini gösterir.",
-    "open":"Satırdaki şirkete ait hissenin Date kolonundaki tarihinde açılış fiyatı",
-    "com":"Satırdaki hissenin hangi şirkete ait olduğunu gösteren şirket adı kolonudur."
+field_descriptions_transiction = {
+    "İşlem":"Yatırımcının belirtilen hisseyi aldığını ya da sattığını gösterir.",    
+    "Hisse Senedi":"Yatırımcının işlem yaptığı hisse kodudur.",
+    "Adet":"İşlem yapılan hissenin kaç adet yapıldığını gösterir",
+    "Fiyat":"İşlem yapılan hissede hangi fiyattan işlem yapıldığını gösterir",
+    "Tarih":"İşlemin yapıldığı tarih",
+    "Sektör":"İşlem yapılan hissenin ait olduğu şirketin sektörünü belirtir.",
 }
 
 config = {
     'llm': llm,
-    'save_charts': True,
+    'save_charts': False,
     'save_charts_path': 'exports/charts',
     'open_charts': False,
     'max_retries': 2}
 
 
-companies_connector = PandasConnector({"original_df": companies}, field_descriptions=field_descriptions)
+transictions_connector = PandasConnector({"original_df": transictions}, field_descriptions=field_descriptions_transiction)
 
-sdf = SmartDataframe(companies_connector,name='companies',description='şirketlerin hisselerine ait veri tablosu',config=config)
+sdf = SmartDataframe(transictions_connector,name='transictions',description='yatırımcının geçmişte yaptığı işlemler',config=config)
 
-companies = SmartDataframe(
+transictions = SmartDataframe(
     sdf,
     config={
         "llm":llm,
@@ -64,8 +60,6 @@ def ai_query(user_input):
 def get_response_from_PandasAi(user_input):
     return sdf.chat(user_input)
     
-
-
 st.set_page_config(page_title="AKbulut Chatbot", page_icon="assets/communication.png")
 
 # Streamlit UI setup
@@ -78,13 +72,6 @@ st.markdown(
     .stApp {
         background-color: black;
     }
-    
-    .response_container {
-        max-height: 400px;  /* Sabit yükseklik, ihtiyacınıza göre ayarlayabilirsiniz */
-        overflow-y: auto;   /* Dikeyde kaydırmayı etkinleştirir */
-        padding: 10px;      /* İçeriği daha güzel göstermek için biraz iç boşluk */
-    }
-    
     .user-message {
         background-color: white;
         border-radius: 8px;
