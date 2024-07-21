@@ -1,0 +1,9 @@
+pandasai
+streamlit
+streamlit-chat
+streamlit-extras
+python-dotenv
+langchain
+langchain-community
+chromadb
+pandas
