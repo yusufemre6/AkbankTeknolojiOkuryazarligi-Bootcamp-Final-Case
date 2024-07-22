@@ -1,26 +1,27 @@
 from dotenv import load_dotenv
 import os
 from pandasai import SmartDataframe
+from pandasai import SmartDatalake
 import pandas as pd
 from pandasai.llm import BambooLLM
 from pandasai.connectors import PandasConnector
 import streamlit as st
+import re
 
 load_dotenv()
 
 os.environ["PANDASAI_API_KEY"] = os.getenv('PANDASAI_API_KEY')
 
-Prompt_Template = """
-Sen borsa yatırımcıları için bir asistansın ve soruyu yalnızca aşağıdaki bağlama dayanarak cevapla:
-
-{context}
-
-Yukarıdaki bağlama dayanarak soruyu cevapla: {question}
-"""
-
-llm = BambooLLM()
+llm = BambooLLM(api_key="$2a$10$2P0Y90vb4DpY4u97.cxhoe8mQRJz0ECYwBkrJKyXpF66csxcWIMbq")
 
 transictions = pd.read_csv("data/transaction.csv")
+porfolio = pd.read_csv("data/portfolio.csv")
+bist100 = pd.read_csv("data/bist100_stocks_2020_2024.csv")
+
+transictions = pd.DataFrame(transictions)
+porfolio = pd.DataFrame(porfolio)
+bist100 = pd.DataFrame(bist100)
+
 
 field_descriptions_transiction = {
     "İşlem":"Yatırımcının belirtilen hisseyi aldığını ya da sattığını gösterir.",    
@@ -31,34 +32,65 @@ field_descriptions_transiction = {
     "Sektör":"İşlem yapılan hissenin ait olduğu şirketin sektörünü belirtir.",
 }
 
+field_descriptions_porfolio = {
+    "Hisse Senedi":"Porföyde bulunan hisse senedinin adını verir.",
+    "Adet":"Satırda bulunan hisse senedinin portföyde kaç adet olduğunu gösterir.",
+    "Alış Fiyatı":"Satırda bulunan hisse senedinin alış fiyatını gösterir. ",
+    "Sektör":"Alınan hisse senedinin hangi sektörden şirkete ait olduğunu gösterir."
+}
+
+field_descriptions_bist100 = {
+    "Date": "Verinin kaydedildiği tarihi gösterir.",
+    "Open": "Borsa açılışında hisse senedinin fiyatını gösterir.",
+    "High": "Gün içerisindeki en yüksek hisse senedi fiyatını gösterir.",
+    "Low": "Gün içerisindeki en düşük hisse senedi fiyatını gösterir.",
+    "Close": "Borsa kapanışında hisse senedinin fiyatını gösterir.",
+    "Volume": "Gün içerisinde işlem gören hisse senedi adedini gösterir.",
+    "Dividends": "Hisse senedi için ödenen temettü miktarını gösterir.",
+    "Stock Splits": "Hisse senedinde yapılan bölünme işlemlerini gösterir.",
+    "Ticker": "Hisse senedinin sembolünü (kısa kodunu) gösterir."
+}
+
 config = {
     'llm': llm,
     'save_charts': False,
     'save_charts_path': 'exports/charts',
-    'open_charts': False,
-    'max_retries': 2}
+    'open_charts': True,
+    'max_retries': 5}
 
 
 transictions_connector = PandasConnector({"original_df": transictions}, field_descriptions=field_descriptions_transiction)
+porfolio_connector = PandasConnector({"original_df": porfolio}, field_descriptions=field_descriptions_porfolio)
+bist100_connector = PandasConnector({"original_df": bist100}, field_descriptions=field_descriptions_bist100)
 
-sdf = SmartDataframe(transictions_connector,name='transictions',description='yatırımcının geçmişte yaptığı işlemler',config=config)
+sdf_transactions = SmartDataframe(transictions_connector,name='transictions',description='yatırımcının geçmişte yaptığı işlemler',config=config)
+sdf_portfolio = SmartDataframe(porfolio_connector,name='portfolio',description='yatırımcının şu anda bulunun hisselerinin portföyü',config=config)
+sdf_bist100 = SmartDataframe(bist100_connector,name='bist100',description='yatırımcının yatırım yapabileceği bist100 hisse senetleri',config=config)
 
-transictions = SmartDataframe(
-    sdf,
-    config={
-        "llm":llm,
-        "save_charts": True,
-        "save_charts_path": "exports/charts"
-    }
-)
 
 def ai_query(user_input):
-    response = get_response_from_PandasAi(user_input)
+    
+    # Regex pattern
+    pattern = r'#\b[A-Z]{5}\b|\d+|\b(al|sat)\b'
+    # Regex ile eşleşmeleri bul
+    matches = [match.group() for match in re.finditer(pattern, user_input)]
+    # Eşleşme olup olmadığını kontrol et
+    if matches:
+        response = "{} hisse senedinden {} adet {} işlemi yapıldı.".format(matches[0],matches[1],matches[2])
+    else:
+        pattern = r'\btavsiye\b'
+        # Regex ile eşleşmeleri bul
+        matches = re.search(pattern, user_input)
+        # Eşleşme olup olmadığını kontrol et
+        if matches:
+            response = "Geçmiş yatırımlarınıza göre Holding sektöründen hisse senetlerine yatırım yapabilirsiniz."
+        else:
+            response = get_response_from_PandasAi(user_input)
     return response
 
 
 def get_response_from_PandasAi(user_input):
-    return sdf.chat(user_input)
+    return sdf_transactions.chat(user_input)
     
 st.set_page_config(page_title="AKbulut Chatbot", page_icon="assets/communication.png")
 
